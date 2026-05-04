@@ -1,0 +1,51 @@
+{
+    "homepage": "https://pc.qq.com/detail/15/detail_1215.html",
+    "description": "WPS Office是一款由金山软件开发的办公软件 包含文字、表格、演示等组件 支持多平台使用。",
+    "version": "12.1.0.25225",
+    "license": "Freeware",
+    "url": "https://sw.pcmgr.qq.com/65d12b919a17c8fc7a76381645b01e64/69f8b97a/spcmgr/download/W.P.S.50.517-12.1.0.25225.exe#/WPS-Office.7z",
+    "hash": "a2302cc3fda2a662c3f58c2920bba2a377f24458c2ee35161abd9009aeccd164",
+    "extract_dir": "$_11_",
+    "bin": "wpsoffice.exe",
+    "shortcuts": [
+        [
+            "wpsoffice.exe",
+            "WPS Office"
+        ],
+        [
+            "wps.exe",
+            "WPS 文字"
+        ],
+        [
+            "et.exe",
+            "WPS 表格"
+        ],
+        [
+            "wpp.exe",
+            "WPS 演示"
+        ],
+        [
+            "ksomisc.exe",
+            "WPS 配置工具"
+        ]
+    ],
+    "persist": "data",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$EXEFILE\" -Switches '-t#'",
+        "Remove-Item \"$dir\\*\" -Exclude '4.7z','2.7z' -Recurse",
+        "Expand-7zipArchive \"$dir\\4.7z\" -ExtractDir 'office6' -Removal",
+        "Expand-7zipArchive \"$dir\\2.7z\" -ExtractDir 'CONTROL\\office6' -Removal"
+    ],
+    "post_uninstall": "if ($purge -and (Test-Path \"$Env:APPDATA\\WPS Office\")) { Remove-Item -Recurse -Force \"$Env:APPDATA\\WPS Office\" }",
+    "checkver": {
+        "url": "https://luban.m.qq.com/api/public/software-manager/softwareProxy",
+        "script": [
+            "$Result = Invoke-RestMethod -Uri $url -Method Post -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=1215'",
+            "@($Result.resp.soft_list.ver_name,$Result.resp.soft_list.download_https_url) | ConvertTo-Json -Compress | Write-Output"
+        ],
+        "regex": "\"([\\d\\.]+)\",\"https://sw.pcmgr.qq.com/(?<path>.+?)\""
+    },
+    "autoupdate": {
+        "url": "https://sw.pcmgr.qq.com/$matchPath#/WPS-Office.7z"
+    }
+}

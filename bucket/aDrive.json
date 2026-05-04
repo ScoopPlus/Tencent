@@ -1,0 +1,37 @@
+{
+    "version": "6.9.1.1841",
+    "description": "阿里云盘是一款速度快、不打扰、够安全、易于分享的网盘，由阿里巴巴集团出品",
+    "homepage": "https://pc.qq.com/detail/16/detail_28156.html",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://alipan.com/protocol/service"
+    },
+    "url": "https://sw.pcmgr.qq.com/6500843b30646e9071d7e822d23e3e6d/69e3b0c6/spcmgr/download/aDrive-6.9.1.exe#/aDrive.7z",
+    "hash": "cc40289de6c35821214c816b8a1101c3ada822f05c7da3b770ae432067eea76a",
+    "shortcuts": [
+        [
+            "aDrive.exe",
+            "阿里云盘"
+        ]
+    ],
+    "persist": "data",
+    "post_install": [
+        "Remove-Item -Force -Recurse \"$dir\\`$PLUGINSDIR\"",
+        "Remove-Item -Force -Recurse \"$dir\\`$TEMP\"",
+        "if (-not (Test-Path \"$Env:APPDATA\\aDrive\")) { ",
+        "  New-Item -ItemType Junction -Path \"$Env:APPDATA\\aDrive\" -Value \"$persist_dir\\data\" | Out-Null",
+        "}"
+    ],
+    "post_uninstall": "if ($purge -and (Test-Path \"$Env:APPDATA\\aDrive\")) { Remove-Item -Recurse -Force \"$Env:APPDATA\\aDrive\" }",
+    "checkver": {
+        "url": "https://luban.m.qq.com/api/public/software-manager/softwareProxy",
+        "script": [
+            "$Result = Invoke-RestMethod -Uri $url -Method Post -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=28156'",
+            "@($Result.resp.soft_list.ver_name,$Result.resp.soft_list.download_https_url) | ConvertTo-Json -Compress | Write-Output"
+        ],
+        "regex": "\"([\\d\\.]+)\",\"https://sw.pcmgr.qq.com/(?<path>.+?)\""
+    },
+    "autoupdate": {
+        "url": "https://sw.pcmgr.qq.com/$matchPath#/aDrive.7z"
+    }
+}

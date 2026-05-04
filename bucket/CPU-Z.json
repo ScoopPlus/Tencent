@@ -1,0 +1,26 @@
+{
+    "version": "2.1.9.0",
+    "description": "CPU-Z是一款CPU检测软件",
+    "homepage": "https://pc.qq.com/detail/19/detail_1019.html",
+    "license": "Freeware",
+    "url": "https://sw.pcmgr.qq.com/6c0998d0236956eea3439aa03155147f/69c356f1/spcmgr/download/cpu-z_2.19-cn.exe",
+    "hash": "855098ed7fa1f36a732c6ae3744ae2257f344fad7e5bb81dbd9ac8360869ee9c",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "cpuz,2.exe",
+            "CPU-Z"
+        ]
+    ],
+    "checkver": {
+        "url": "https://luban.m.qq.com/api/public/software-manager/softwareProxy",
+        "script": [
+            "$Result = Invoke-RestMethod -Uri $url -Method Post -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=1019'",
+            "@($Result.resp.soft_list.ver_name,$Result.resp.soft_list.download_https_url) | ConvertTo-Json -Compress | Write-Output"
+        ],
+        "regex": "\"([\\d\\.]+)\",\"https://sw.pcmgr.qq.com/(?<path>.+?)\""
+    },
+    "autoupdate": {
+        "url": "https://sw.pcmgr.qq.com/$matchPath"
+    }
+}
