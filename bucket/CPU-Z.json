@@ -1,10 +1,10 @@
 {
-    "version": "2.1.9.0",
+    "version": "2.20.0",
     "description": "CPU-Z是一款CPU检测软件",
     "homepage": "https://pc.qq.com/detail/19/detail_1019.html",
     "license": "Freeware",
-    "url": "https://sw.pcmgr.qq.com/b4d728480b4351bc89a8d844f7c24f51/69f96477/spcmgr/download/cpu-z_2.19-cn.exe",
-    "hash": "855098ed7fa1f36a732c6ae3744ae2257f344fad7e5bb81dbd9ac8360869ee9c",
+    "url": "https://sw.pcmgr.qq.com/2c6bd3995acf411ce1d9d18caa029f94/6a131eda/spcmgr/download/cpu-z_2.20-cn.exe",
+    "hash": "76690fff7685114d5518627818f6c69ecf3e7da9d341b23c8cfb3301e6192a31",
     "innosetup": true,
     "shortcuts": [
         [
