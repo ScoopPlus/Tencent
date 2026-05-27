@@ -1,10 +1,10 @@
 {
     "homepage": "https://pc.qq.com/detail/14/detail_32414.html",
     "description": "百度网盘",
-    "version": "8.3.9.103",
+    "version": "8.4.5.103",
     "license": "https://pan.baidu.com/disk/main#/protocol/duty_mobi",
-    "url": "https://sw.pcmgr.qq.com/d48e4d7bbf18f2117abff0d8f2552ed1/6a0874b2/spcmgr/download/BaiduNetdisk_txgj1_8.3.9.103.exe#/BaiduNetdisk-8.3.9.103.7z",
-    "hash": "5ea38747ba7bda9fb537e57574dcfd8c985d1f2c0fc954cb4cfaa46d700703ce",
+    "url": "https://sw.pcmgr.qq.com/50e47621f4b43745dc3d389979fe5a11/6a1682dc/spcmgr/download/BaiduNetdisk_txgj1_8.4.5.103.exe#/BaiduNetdisk-8.4.5.103.7z",
+    "hash": "550b6756edcaafc3584c2fd3dcd206468edff7820380ecbb07956904c5489861",
     "shortcuts": [
         [
             "BaiduNetdisk.exe",
