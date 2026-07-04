@@ -3,8 +3,8 @@
     "description": "WPS Office是一款由金山软件开发的办公软件 包含文字、表格、演示等组件 支持多平台使用。",
     "version": "12.1.0.26895",
     "license": "Freeware",
-    "url": "https://sw.pcmgr.qq.com/ba705f5bee74548a64e983ea6cd8c418/6a36b3bf/spcmgr/download/W.P.S.50.517_12.1.0.26895.exe#/WPS-Office.7z",
-    "hash": "78e682724e8bc22d457dcf619449e9624c91bc3a0e526ed46dba82533e7c6585",
+    "url": "https://sw.pcmgr.qq.com/1721899b2ff8dea31e610a1fe4756d1a/6a495330/spcmgr/download/W.P.S.50.517-12.1.0.26895.exe#/WPS-Office.7z",
+    "hash": "e0f5acae6cf55271f26efa1254fa6a57041744edac82fdbfcf263629f04b70e1",
     "extract_dir": "$_11_",
     "bin": "wpsoffice.exe",
     "shortcuts": [
