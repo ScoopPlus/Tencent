@@ -1,0 +1,22 @@
+{
+    "version": "2.20.2",
+    "description": "CPU-Z是一款CPU检测软件",
+    "homepage": "https://pc.qq.com/detail/19/detail_1019.html",
+    "license": "Freeware",
+    "url": "https://vcdn.qzz.io/pcmgr/download/1019#/CPU-Z.exe",
+    "hash": "1cb7f53ad5f2ca73614edc43c9345feb41699b1adf605c46d2dd1a71d5525379",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "cpuz,2.exe",
+            "CPU-Z"
+        ]
+    ],
+    "checkver": {
+        "url": "https://vcdn.qzz.io/pcmgr/1019",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://vcdn.qzz.io/pcmgr/download/1019#/CPU-Z.exe"
+    }
+}

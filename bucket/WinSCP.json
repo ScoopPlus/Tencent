@@ -1,0 +1,34 @@
+{
+    "version": "5.17.10.11087",
+    "description": "WinSCP是一款支持SSH(Secure SHell)的SCP(Secure CoPy)文件传输软件",
+    "homepage": "https://pc.qq.com/detail/11/detail_2331.html",
+    "license": "GPL-3.0-or-later",
+    "url": "https://vcdn.qzz.io/pcmgr/download/2331#/WinSCP.exe",
+    "hash": "16caaceb26e654d1ffebe159751bbd46840ad0eba4e0f5da2c4e105c3da44d1d",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "WinSCP.exe",
+            "WinSCP"
+        ]
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\winscp.ini\")) {",
+        "    @(",
+        "        '[Configuration\\Interface]'",
+        "        \"RandomSeedFile=$persist_dir\\winscp.rnd\"",
+        "    ) | Add-Content -Path \"$dir\\winscp.ini\" -Encoding ASCII -Force",
+        "}"
+    ],
+    "persist": [
+        "winscp.ini",
+        "Translations"
+    ],
+    "checkver": {
+        "url": "https://vcdn.qzz.io/pcmgr/2331",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://vcdn.qzz.io/pcmgr/download/2331#/WinSCP.exe"
+    }
+}

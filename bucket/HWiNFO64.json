@@ -1,0 +1,23 @@
+{
+    "version": "5.5.4.0",
+    "description": "HWiNFO64是一款电脑硬件检测软件。它主要可以显示出处理器、主板及芯片组、PCMCIA接口、BIOS版本、内存等信息",
+    "homepage": "https://pc.qq.com/detail/17/detail_22117.html",
+    "license": "Freeware",
+    "url": "https://vcdn.qzz.io/pcmgr/download/22117#/HWiNFO64.exe",
+    "hash": "93bcbc4e8ea5ab51c8f84f923a74db7fd04481055316004774caeceec592a2de",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "HWiNFO64.EXE",
+            "HWiNFO64"
+        ]
+    ],
+    "persist": "HWiNFO64.ini",
+    "checkver": {
+        "url": "https://vcdn.qzz.io/pcmgr/22117",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://vcdn.qzz.io/pcmgr/download/22117#/HWiNFO64.exe"
+    }
+}
