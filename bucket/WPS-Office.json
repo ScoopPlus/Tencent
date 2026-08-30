@@ -4,7 +4,7 @@
     "version": "12.1.0.28043",
     "license": "Freeware",
     "url": "https://vcdn.qzz.io/pcmgr/download/1215#/WPS-Office.7z",
-    "hash": "6e6be36327e85577a15d91876eaf98a7db67e5b60781e83f4905f4814e34deb8",
+    "hash": "9d12fcf6a0dbf68e646f7885be21b79425e56420f75641c77ff84f3fc7c5d15f",
     "extract_dir": "$_11_",
     "bin": "wpsoffice.exe",
     "shortcuts": [
