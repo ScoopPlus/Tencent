@@ -1,5 +1,5 @@
 {
-    "version": "4.1.13.65",
+    "version": "4.1.15.11",
     "description": "Free messaging and calling app by Tencent",
     "homepage": "https://www.wechat.com/",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://vcdn.qzz.io/pcmgr/download/11488#/Weixin.7z",
-            "hash": "a1978685c5d12ee6adc372a6348ffe1c9b2ca95a59787e4ed66279436b57c5e1"
+            "hash": "4aa51657d0938ad8754b46485a19e32d8de16f1ee13a0938d1493057ddcf6e7e"
         }
     },
     "installer": {
